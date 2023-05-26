@@ -7,7 +7,7 @@ public class SpeedyAir
 {
     public async Task ListFlights()
     {
-        IList<Flight> flights = await FlightStore.Instance.getElements();
+        IList<Flight> flights = await FlightStore.Instance.GetElements();
         foreach (Flight flight in flights)
         {
             Console.WriteLine(
@@ -17,8 +17,8 @@ public class SpeedyAir
     
     public async Task ScheduleFlights()
     {
-        IList<Flight> flights = await FlightStore.Instance.getElements();
-        IList<Order> orders = await OrderStore.Instance.getElements();
+        IList<Flight> flights = await FlightStore.Instance.GetElements();
+        IList<Order> orders = await OrderStore.Instance.GetElements();
         IList<FlightPlan> scheduledFlights =
             flights.Select(flight => new FlightPlan() { Flight = flight, Capacity = flight.Capacity })
                 .OrderBy(flightPlan => flightPlan.Flight.Day)
@@ -26,14 +26,10 @@ public class SpeedyAir
         foreach (Order order in orders)
         {
             Flight? targetFlight = UseFlight(scheduledFlights, order);
-            if (targetFlight == null)
-            {
-                Console.WriteLine(
-                    $"order: {order.Number}, flightNumber: not scheduled");
-            } else
-            {
-                Console.WriteLine($"order: {order.Number}, flightNumber: {targetFlight.Number}, departure: {targetFlight.From}, arrival: {targetFlight.To}, day: {targetFlight.Day}");
-            }
+            Console.WriteLine(targetFlight == null ?
+                $"order: {order.Number}, flightNumber: not scheduled" :
+                $"order: {order.Number}, flightNumber: {targetFlight.Number}, departure: {targetFlight.From}, arrival: {targetFlight.To}, day: {targetFlight.Day}");
+ 
         }
     }
 

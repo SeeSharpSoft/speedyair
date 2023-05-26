@@ -14,7 +14,7 @@ public class OrderStoreTest
     [Test]
     public async Task Orders_File_Should_Be_Parsed_Correctly()
     {
-        IList<Order> orders = await OrderStore.Instance.getElements();
+        IList<Order> orders = await OrderStore.Instance.GetElements();
         Assert.That(orders, Matches.Snapshot());
     }
 }

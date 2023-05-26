@@ -14,7 +14,7 @@ public class CityStoreTest
     [Test]
     public async Task City_File_Should_Be_Parsed_Correctly()
     {
-        IList<City> cities = await CityStore.Instance.getElements();
+        IList<City> cities = await CityStore.Instance.GetElements();
         Assert.That(cities, Matches.Snapshot());
     }
 }

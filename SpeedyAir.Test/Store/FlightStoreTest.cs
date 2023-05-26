@@ -14,7 +14,7 @@ public class FlightStoreTest
     [Test]
     public async Task Flights_File_Should_Be_Parsed_Correctly()
     {
-        IList<Flight> flights = await FlightStore.Instance.getElements();
+        IList<Flight> flights = await FlightStore.Instance.GetElements();
         Assert.That(flights, Matches.Snapshot());
     }
 }

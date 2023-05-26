@@ -17,10 +17,10 @@ public class OrderStore : BaseStore<Order>
         // singleton
     }
     
-    protected override async Task<IList<Order>> loadElements()
+    protected override async Task<IList<Order>> LoadElements()
     {
         FileStream stream = File.OpenRead(FileName);
-        IList<City> cities = await CityStore.Instance.getElements();
+        IList<City> cities = await CityStore.Instance.GetElements();
         Dictionary<String, Dictionary<string, string>> dict = await JsonSerializer.DeserializeAsync<Dictionary<String, Dictionary<string, string>>>(stream) ?? new Dictionary<String, Dictionary<string, string>>();
         return dict.Select(entry => new Order()
             {
