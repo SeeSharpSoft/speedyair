@@ -1,0 +1,20 @@
+{
+    "order-001": {
+        "destination" : "YYZ"
+    },
+    "order-002": {
+        "destination" : "ABC"
+    },
+    "order-003": {
+        "destination" : "YYC"
+    },
+    "order-004": {
+        "destination" : "YYC"
+    },
+    "order-005": {
+        "destination" : "YYC"
+    },
+    "order-006": {
+        "destination" : "YYZ"
+    }
+}

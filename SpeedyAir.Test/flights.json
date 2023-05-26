@@ -1,0 +1,42 @@
+[
+  {
+    "Number": 1,
+    "From": {
+      "Code": "YUL",
+      "Name": "Montreal"
+    },
+    "To": {
+      "Code": "YYZ",
+      "Name": "Toronto"
+    },
+    "Day": 1,
+    "Capacity": 1
+  },
+  {
+    "Number": 2,
+    "From": {
+      "Code": "YUL",
+      "Name": "Montreal"
+    },
+    "To": {
+      "Code": "YYC",
+      "Name": "Calgary"
+    },
+    "Day": 1,
+    "Capacity": 2
+  },
+  {
+    "Number": 1,
+    "From": {
+      "Code": "YUL",
+      "Name": "Montreal"
+    },
+    "To": {
+      "Code": "YYZ",
+      "Name": "Toronto"
+    },
+    "Day": 2,
+    "Capacity": 1
+  }
+]
+  
