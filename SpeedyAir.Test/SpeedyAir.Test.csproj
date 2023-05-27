@@ -25,7 +25,6 @@
 
     <ItemGroup>
       <Folder Include="Store\_snapshots\" />
-      <Folder Include="_snapshots\" />
     </ItemGroup>
 
     <ItemGroup>

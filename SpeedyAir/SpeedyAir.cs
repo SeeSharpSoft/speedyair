@@ -23,7 +23,7 @@ public class SpeedyAir
             flights.Select(flight => new FlightPlan() { Flight = flight, Capacity = flight.Capacity })
                 .OrderBy(flightPlan => flightPlan.Flight.Day)
                 .ToList();
-        foreach (Order order in orders)
+        foreach (Order order in orders.OrderBy(order => order.Priority))
         {
             Flight? targetFlight = UseFlight(scheduledFlights, order);
             Console.WriteLine(targetFlight == null ?
