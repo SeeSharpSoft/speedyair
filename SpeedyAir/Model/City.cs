@@ -2,8 +2,8 @@ namespace SpeedyAir.Model;
 
 public class City
 {
-    public String Code { get; set; }
-    public String Name { get; set; }
+    public String Code { get; init; }
+    public String? Name { get; init; }
 
     public override string ToString()
     {
@@ -12,7 +12,7 @@ public class City
     
     public override int GetHashCode()
     {
-        return HashCode.Combine(Code.GetHashCode(), Name.GetHashCode());
+        return HashCode.Combine(Code.GetHashCode(), Name == null ? 0 : Name.GetHashCode());
     }
 
     public override bool Equals(object? obj)

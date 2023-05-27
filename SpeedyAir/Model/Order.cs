@@ -2,10 +2,10 @@ namespace SpeedyAir.Model;
 
 public class Order
 {
-    public int Priority { get; set; }
-    public String Number { get; set; }
-    public City Destination { get; set; }
-    public int Amount { get; set; }
+    public int Priority { get; init; }
+    public String Number { get; init; }
+    public City Destination { get; init; }
+    public int Amount { get; init; }
     
     public override string ToString()
     {

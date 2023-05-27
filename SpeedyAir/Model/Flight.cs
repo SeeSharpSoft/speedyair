@@ -7,11 +7,11 @@ public class Flight
         Capacity = 20;
     }
     
-    public int Number { get; set; }
-    public City From { get; set;  }
-    public City To { get; set; }
-    public int Day { get; set; }
-    public int Capacity { get; set; }
+    public int Number { get; init; }
+    public City From { get; init;  }
+    public City To { get; init; }
+    public int Day { get; init; }
+    public int Capacity { get; init; }
     
     public override string ToString()
     {

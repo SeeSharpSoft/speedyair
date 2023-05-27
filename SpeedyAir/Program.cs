@@ -1,8 +1,8 @@
 ﻿namespace SpeedyAir;
 class Program
 {
-    private const string LIST_FLIGHTS = "list";
-    private const string SCHEDULE_FLIGHTS = "schedule";
+    private const string ListFlights = "list";
+    private const string ScheduleFlights = "schedule";
     
     static async Task<int> Main(string[] args)
     {
@@ -12,10 +12,10 @@ class Program
             SpeedyAir main = new SpeedyAir();
             switch (args[0])
             {
-                case LIST_FLIGHTS:
+                case ListFlights:
                     await main.ListFlights();
                     break;
-                case SCHEDULE_FLIGHTS:
+                case ScheduleFlights:
                     await main.ScheduleFlights();
                     break;
                 default:
@@ -30,8 +30,8 @@ class Program
     private static void ShowArguments()
     {
         Console.WriteLine("Available arguments:");
-        Console.WriteLine("'list': show available flights");
-        Console.WriteLine("'schedule': schedule orders based on available flights");
+        Console.WriteLine($"{ListFlights} - show available flights");
+        Console.WriteLine($"{ScheduleFlights} - schedule orders based on available flights");
     }
 }
 
